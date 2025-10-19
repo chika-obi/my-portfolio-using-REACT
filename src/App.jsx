@@ -6,6 +6,7 @@ import Projects from './components/Projects/Projects';
 import Footer from './components/Footer/Footer';
 import Contact from './components/Contact/Contact';
 import BackToTop from './components/BackToTop/BackToTop';
+import Skills from './components/Skills/Skills';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <Hero />
       <About />
+      <Skills />
       <Projects />
       <Contact />
       <Footer />

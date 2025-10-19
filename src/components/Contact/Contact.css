@@ -54,6 +54,7 @@ input {
 textarea {
   min-height: 160px;
   resize: none;
+  width: 95%;
 }
 
 input:focus,

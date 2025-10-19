@@ -43,11 +43,12 @@
 .project-card {
   background: #f9f9f9;
   border-radius: 16px;
-  padding: 2rem;
+  padding: 0rem;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   text-align: left;
   border: 1px solid #eaeaea;
+  width: 15rem;
 }
 
 .project-card h3 {

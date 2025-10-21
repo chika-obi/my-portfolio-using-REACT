@@ -1,8 +1,5 @@
 import { motion } from "framer-motion";
 import "./About.css";
-import profileImg from "../../assets/profile.jpg";
-
-
 
 function About() {
   return (
@@ -11,40 +8,44 @@ function About() {
       className="about"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, ease: "easeOut" }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-      <h2 className="about-title">About Me</h2>
-
-      <div className="about-container">
-        {/* Left: Image */}
-        <motion.div
-          className="about-image"
-          whileHover={{ scale: 1.05 }}
-          transition={{ type: "spring", stiffness: 200 }}
-          
-        >
-          <img src={profileImg} alt="Profile" />
-          
-        </motion.div>
-
-        {/* Right: Text */}
+      <div className="about-content">
         <div className="about-text">
-          <h3>Who I Am</h3>
-          <p>
-            I'm <strong>Chika-Obi</strong>, a passionate <strong>Frontend Developer</strong> 
-            and <strong>Tech Educator</strong> who loves transforming ideas into 
-            functional, beautiful digital experiences.
+          <h2 className="about-title">About Me</h2>
+          <p className="ab">
+            Hello! I'm <strong>Chika-Obi</strong>, a passionate 
+            <strong> Frontend Developer</strong> and 
+            <strong> Tech Educator</strong> focused on creating 
+            user-friendly, responsive, and visually appealing digital experiences.
           </p>
-          <p>
-            With a background in <strong>Computer Science</strong> and a strong drive 
-            for innovation, I build scalable, interactive, and modern web applications 
-            that focus on user experience and performance.
+          <p className="ab">
+            My journey started with a deep curiosity for how things work on the web. 
+            Over time, I’ve honed my skills in <strong>React</strong>, 
+            <strong> JavaScript</strong>, and modern UI/UX principles to build 
+            clean, accessible, and high-performing applications.
           </p>
-          <p>
-            Outside coding, I enjoy teaching, mentoring young tech enthusiasts, 
-            and exploring ways to use technology to make education more accessible.
+          <p className="ab">
+            Beyond coding, I love mentoring beginners in technology and helping them 
+            gain confidence in software development. My goal is to combine 
+            creativity and logic to craft meaningful solutions that inspire others.
           </p>
+
+          <div className="about-highlights">
+            <div className="highlight">
+              <h4>💻 Tech Stack</h4>
+              <p>React, JavaScript, HTML, CSS, Git, Vite</p>
+            </div>
+            <div className="highlight">
+              <h4>🎯 Core Values</h4>
+              <p>Creativity, Growth, and Excellence</p>
+            </div>
+            <div className="highlight">
+              <h4>🌍 Vision</h4>
+              <p>Building digital experiences that empower learning and innovation.</p>
+            </div>
+          </div>
         </div>
       </div>
     </motion.section>

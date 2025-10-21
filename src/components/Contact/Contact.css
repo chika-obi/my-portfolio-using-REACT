@@ -54,7 +54,7 @@ input {
 textarea {
   min-height: 160px;
   resize: none;
-  width: 95%;
+  width: 100%;
 }
 
 input:focus,
@@ -97,3 +97,84 @@ textarea:focus {
     font-size: 1rem;
   }
 }
+.contact-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  
+}
+
+.contact-form, .contact-info {
+ 
+  flex: 1;
+  min-width: 300px;
+}
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;              /* space between icon/text */
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  flex-wrap: wrap;
+  background: rgba(0, 255, 231, 0.1);  /* subtle background */
+  padding: 0.5rem 0.8rem;              /* padding inside pill */
+  border-radius: 25px;                 /* rounded pill */
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+.contact-info p:hover {
+  transform: translateY(-2px);
+  background: rgba(0, 255, 231, 0.2);  /* slightly brighter on hover */
+}
+
+
+.contact-info a {
+  color: #00ffe7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #02d5c3;
+}
+
+/* WhatsApp link as a small button */
+.contact-info a.whatsapp-link {
+  font-weight: 600;
+  background: #25d366;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-info a.whatsapp-link:hover {
+  background: #1ebe5b;
+  transform: scale(1.05);
+}
+
+/* Optional: add subtle hover effect to phone, email, website links */
+.contact-info p:hover {
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+.contact-info{
+   /* background-color: teal; */
+   /* border: 2px solid white; */
+   border-radius: 5%;
+   
+}
+
+/* Ensure layout stays neat on smaller screens */
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-info p {
+    margin: 0.5rem 0;
+  }
+}
+

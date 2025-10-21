@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import Contact from './components/Contact/Contact';
 import BackToTop from './components/BackToTop/BackToTop';
 import Skills from './components/Skills/Skills';
+import Qualifications from './components/Qualifications/Qualifications';
 
 
 function App() {
@@ -15,7 +16,9 @@ function App() {
       <Header />
       <Hero />
       <About />
+      <Qualifications />
       <Skills />
+      <Header/>
       <Projects />
       <Contact />
       <Footer />

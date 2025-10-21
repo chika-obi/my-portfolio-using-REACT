@@ -25,13 +25,14 @@
   display: flex;
   justify-content: flex-end;
   overflow: visible;
+  transition: max-height 0.3s ease-in-out;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 2rem; /* space between items */
+  gap: 2rem;
   margin: 0;
   padding: 0;
   flex-wrap: nowrap;
@@ -49,12 +50,29 @@
   color: #00ffe7;
 }
 
+/* Hamburger menu - hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+}
+
 /* Ensure hero section starts below the fixed header */
 .hero {
   padding-top: 100px;
 }
 
-/* Adjust spacing on medium screens */
+/* -------------------- Responsive Design -------------------- */
+
+/* Medium screens (tablet / smaller desktop) */
 @media (max-width: 992px) {
   .header {
     padding: 1rem 2rem;
@@ -65,13 +83,66 @@
   }
 }
 
-/* On very small screens */
+/* Small screens (mobile) */
 @media (max-width: 768px) {
-  .nav-links {
-    gap: 0.8rem;
+  .header {
+    padding: 1rem 1.5rem;
   }
 
   .logo {
     font-size: 1.5rem;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Mobile nav - hidden initially with max-height */
+  .nav {
+    position: absolute;
+    top: 70px; /* adjust based on header height */
+    left: 0;
+    width: 100%;
+    background: #111;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-in-out;
+  }
+
+  /* Open state - smooth slide down */
+  .nav.nav-open {
+    max-height: 500px; /* adjust if menu has more links */
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    align-items: center;
+  }
+
+  .nav-links li a {
+    font-size: 1rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .header {
+    padding: 0.8rem 1rem;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .hamburger .bar {
+    width: 20px;
+  }
+
+  .nav-links li a {
+    font-size: 0.9rem;
   }
 }

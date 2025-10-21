@@ -71,4 +71,42 @@ button:focus-visible {
   }
 }
 
+/* index.css */
+
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+/* Global buttons */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Example global hover */
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Global breakpoints */
+:root {
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+}
+
+
 

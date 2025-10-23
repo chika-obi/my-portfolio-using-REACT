@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import "./Contact.css";
+import contactImg from "../../assets/ContactC.png";
+
 
 function Contact() {
   const [name, setName] = useState("");
@@ -34,42 +36,13 @@ function Contact() {
       </p>
 
       <div className="contact-container">
-        {/* LEFT COLUMN - FORM */}
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <div className="form-group">
-            <input
-              type="text"
-              placeholder="Your Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
+        <div className="contact-info">
+     <div className="contact-img">
+      <img src={contactImg} alt="Contact Us" />
+    </div>
+  
 
-          <textarea
-            placeholder="Your Message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-          ></textarea>
-
-          <motion.button
-            type="submit"
-            className="send-btn"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Send Message
-          </motion.button>
-        </form>
-
+       </div>
         {/* RIGHT COLUMN - CONTACT INFO */}
         <div className="contact-info">
           <h3>Contact Information</h3>

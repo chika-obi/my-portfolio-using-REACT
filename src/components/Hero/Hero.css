@@ -23,11 +23,21 @@
   z-index: 1;
 }
 
+/* ✅ New layout container */
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  z-index: 2;
+  position: relative;
+}
+
 .hero-content {
   color: #fff;
-  max-width: 800px;
+  max-width: 600px;
   padding: 2rem;
-  z-index: 2;
 }
 
 .hero-content h1 {
@@ -47,7 +57,10 @@
 }
 
 .hero-btn {
-  display: inline-block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #00ffe7;
   color: #111;
   font-weight: 600;
@@ -63,6 +76,17 @@
   transform: scale(1.05);
 }
 
+/* ✅ Right-side image styling */
+.hero-image img {
+  left:-50%;
+  position: relative;
+  width: 150px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+}
+
 /* ✅ Large tablets / smaller desktops */
 @media (max-width: 1024px) {
   .hero-content h1 {
@@ -71,26 +95,48 @@
   .hero-content p {
     font-size: 1.1rem;
   }
+  .hero-image img {
+    width: 350px;
+  }
 }
 
 /* ✅ Tablets / large phones */
 @media (max-width: 768px) {
   .hero {
     background-image: url("../../assets/mobile3.png"); /* Show only on phones */
-    min-height: 135vh;     
+    min-height: 135vh;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding: 1.5rem;
   }
 
   .hero-content h1 {
     font-size: 2.2rem;
   }
+
   .hero-content p {
     font-size: 1rem;
   }
+
   .hero-btn {
+    margin-top: 1rem;
     position: absolute;
-    left: 9rem;
-    top:40rem;
-    /* padding: 0.7rem 1.5rem; */
+    display: flex;
+    top:340%;
+ 
+ }
+
+  .hero-image img {
+     position: absolute;
+     width: 120px;
+     margin-top: 2rem;
+    
   }
 }
 
@@ -105,6 +151,8 @@
   .hero-btn {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
-    
+  }
+  .hero-image img {
+    width: 200px;
   }
 }
